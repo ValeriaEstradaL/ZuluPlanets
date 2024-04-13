@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var dsn = "root:@M1l1to@@tcp(localhost:3306)/zuluPlanets?charset=utf8mb4&parseTime=True&loc=Local"
+var dsn = "root:pass@tcp(localhost:3306)/zuluPlanets?charset=utf8mb4&parseTime=True&loc=Local"
 var Database = func() (db *gorm.DB) {
 	if db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{}); err != nil {
 		fmt.Println("Error en la conexion", err)
